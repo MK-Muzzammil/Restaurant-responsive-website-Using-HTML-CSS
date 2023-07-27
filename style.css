@@ -1,0 +1,204 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,html{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  height: 100vh;
+
+}
+.Header{
+  position:sticky;
+  z-index:3;
+}
+.navContainer{
+  height: 3rem;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.MainBodyContainer{
+  margin-top: 2rem;
+  
+}
+
+.barContainer{
+  margin-right: 2rem;
+  font-weight: 500;
+}
+.heroimageTextContainer{
+  display: flex;
+  border: 1px solid black;
+
+  gap: 2rem;
+}
+
+#heroImage{
+  width: 20rem;
+  height: 20rem;
+  margin-block: 2rem;
+  margin-inline: 1rem;
+}
+.textContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 3rem;
+}
+.discountContainer ,h1,p{
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.discountContainer span{
+  background-color: green;
+  color: white;
+}
+.buttonContainer input{
+  padding: 0.2rem;
+  background-color: lightsalmon;
+
+}
+
+/* ==================================Cards Section ======================= */
+.cardsContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  gap:2rem;
+  padding: 3rem 4rem;
+}
+.card{
+  display: flex;
+}
+.Text{
+  margin-left: 0.5rem;
+}
+
+.divider{
+  border: 1px solid black;
+}
+
+/* ====================================Menu Section========================== */
+
+.menuContainer{
+  /* min-width: 1100px;
+  min-height: 1054px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menuSpanContainer,.exploreHeadingContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+.menuSpanContainer span{
+  padding: 0.2rem;
+  background-color: green;
+  color: white;
+
+}
+
+/* =====================================Grid Use=================================== */
+.grid{
+  display: grid;
+  gap:0.3rem;
+  grid-template-areas:
+  "I1 I1 I2 I3" 
+  "I1 I1 I2 I7" 
+  "I4 I5 I6 I7";
+  /* width: 100%; */
+ 
+  
+}
+.itemImage{
+  border-radius: 10px;
+  transition: 0.3s ease-in;
+  height: 100%;
+  width: 100%;
+}
+.itemImage:hover{
+  transform: scale(1.07);
+  transition-timing-function: ease-out;
+}
+
+.item1{
+  grid-area: I1;
+}
+.item2{
+  grid-area: I2;
+}
+.item3{
+  grid-area: I3;
+}
+.item4{
+  grid-area: I4;
+}
+.item5{
+  grid-area: I5;
+}
+.item6{
+  grid-area: I6;
+}
+.item7{
+  grid-area: I7;
+}
+
+/* =====================================Footer Container===================================== */
+.footerContainer{
+  background-color: lightsalmon;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px solid red;
+
+}
+h4{
+  padding-bottom:0.7rem ;
+}
+.iconContainer{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+/* Responsiveness Media Queries  */
+@media screen and (max-width:620px) {
+  .heroimageTextContainer{
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  
+}
+@media screen and (max-width:342px) {
+  #heroImage{
+    width: 18rem;
+    height: 18rem;
+  }
+
+  
+}
+
+@media screen and (max-width:530px) {
+  .footerContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+  .mediaLink{
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+  
+}
